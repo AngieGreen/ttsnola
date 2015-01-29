@@ -1,4 +1,4 @@
-<h1>Practice files for Code School</h1>
+Practice files for Code School
 
 A dummy repository for the first eight weeks of code school with TTS.
 
