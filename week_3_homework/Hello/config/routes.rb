@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  get 'pages/home'
+  get 'static_pages/home'
+
+  get 'static_pages/help'
 
 #this sets the pages/home file as the home page (index)
   root to: 'pages#home'
