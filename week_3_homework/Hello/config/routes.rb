@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
   get 'help' => 'static_pages#help'
 
   get 'about' => 'static_pages#about'
 
   get 'contact' => 'static_pages#contact'
+
+  get 'signup' => 'users#new'
 
 #this sets the pages/home file as the home page (index)
   root 'static_pages#home'
