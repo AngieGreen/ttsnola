@@ -16,10 +16,6 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :video %><br>
-    <%= f.text_area :video %>
-  </div>
-  <div class="field">
     <%= f.label :artist_id %><br>
     <%= f.collection_select :artist_id, @artists, :id, :name %>
   </div>

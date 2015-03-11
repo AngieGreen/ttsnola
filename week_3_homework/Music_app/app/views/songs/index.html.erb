@@ -6,7 +6,6 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Video</th>
       <th>Artist</th>
       <th colspan="3"></th>
     </tr>
@@ -16,7 +15,6 @@
     <% @songs.each do |song| %>
       <tr>
         <td><%= song.name %></td>
-        <td><%= song.video %></td>
         <td><%= song.artist_id %></td>
         <td><%= link_to 'Show', song %></td>
         <td><%= link_to 'Edit', edit_song_path(song) %></td>
