@@ -16,7 +16,6 @@ class PlaylistsController < ApplicationController
   def new
     @playlist = Playlist.new
     @songs = Song.all
-    @artists = Artist.all
   end
 
   # GET /playlists/1/edit
@@ -27,6 +26,8 @@ class PlaylistsController < ApplicationController
   # POST /playlists.json
   def create
     @playlist = Playlist.new(playlist_params)
+    @playlist.artist = @playlist.song.artist
+
 
     respond_to do |format|
       if @playlist.save
