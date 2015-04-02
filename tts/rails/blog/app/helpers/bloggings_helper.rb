@@ -1,0 +1,2 @@
+module BloggingsHelper
+end

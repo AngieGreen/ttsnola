@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Blogs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Blog text</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bloggings.each do |blogging| %>
+      <tr>
+        <td><%= blogging.title %></td>
+        <td><%= blogging.blog_text %></td>
+        <td><%= link_to 'Show', blogging %></td>
+        <td><%= link_to 'Edit', edit_blogging_path(blogging) %></td>
+        <td><%= link_to 'Destroy', blogging, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= will_paginate @bloggings %>
+<%= link_to 'New Blogging', new_blogging_path %>
